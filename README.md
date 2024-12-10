@@ -55,9 +55,8 @@ The project emphasizes **security**, ensuring that all interactions are secure a
 
 Clone the project repository to your local machine:
 
-```bash
-git clone https://github.com/yourusername/BASIC_CRUD_APP.git
 
+git clone https://github.com/yourusername/BASIC_CRUD_APP.git
 
 
 ### Step 2: Install WAMP/XAMPP
@@ -67,10 +66,12 @@ If you don’t already have it, download and install WAMP or XAMPP, which will p
 Open phpMyAdmin (or MySQL Workbench).
 Create a new database named blog1.
 Import the db_schema.sql file from the project directory to create the required tables.
-Step 4: Update Database Credentials
+
+### Step 4: Update Database Credentials
 Open the db_connection.php file located in the includes/ folder.
 Update the database connection details ($servername, $username, $password, and $dbname) to match your local MySQL configuration.
-Step 5: Run the Application
+
+### Step 5: Run the Application
 Start your Apache and MySQL servers via WAMP/XAMPP.
 Navigate to http://localhost/BASIC_CRUD_APP/ in your web browser.
 Usage
@@ -78,47 +79,23 @@ Login: Users can log in using their credentials (create, update, and view profil
 Dashboard: After logging in, users are directed to their dashboard where they can update their profile information.
 Edit Profile: Users can edit their profile details such as name, email, etc.
 Logout: Users can log out to secure their account.
-Security Measures Implemented
+
+### Security Measures Implemented
 💡 Security Measures Highlighted
 The security of this application is a top priority. Several key security measures have been implemented to ensure the integrity of user data:
 
 🔒 1. Prepared Statements for Database Queries
 SQL Injection is prevented by using prepared statements. These statements ensure that user inputs are handled as data, not executable code. This is one of the most critical security practices to avoid harmful SQL queries.
 
-Example:
 
-php
-Copy code
-$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
-$stmt->bind_param("i", $user_id);
-$stmt->execute();
 🔐 2. Password Hashing
 User passwords are hashed using PHP’s built-in password_hash() function. This ensures that passwords are never stored in plain text in the database, protecting sensitive user data.
 
-Example:
-
-php
-Copy code
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-During login, passwords are verified using password_verify() to ensure secure authentication.
 
 🛡️ 3. Input Validation and Sanitization
 User inputs are validated and sanitized using PHP’s built-in functions to prevent malicious data from entering the system. For example, emails are validated, and strings are sanitized to ensure no harmful code is executed.
 
-Example:
 
-php
-Copy code
-$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 🔑 4. Session Management
 Sessions are used to keep track of user authentication. Session IDs are unique for each user, and the session is securely destroyed during logout to prevent unauthorized access to the user dashboard.
 
-Example:
-
-php
-Copy code
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-}
