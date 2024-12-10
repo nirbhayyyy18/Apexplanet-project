@@ -60,10 +60,10 @@ git clone https://github.com/yourusername/BASIC_CRUD_APP.git
 
 
 
-Step 2: Install WAMP/XAMPP
+### Step 2: Install WAMP/XAMPP
 If you don’t already have it, download and install WAMP or XAMPP, which will provide the necessary Apache server, MySQL, and PHP setup.
 
-Step 3: Create the Database
+### Step 3: Create the Database
 Open phpMyAdmin (or MySQL Workbench).
 Create a new database named blog1.
 Import the db_schema.sql file from the project directory to create the required tables.
