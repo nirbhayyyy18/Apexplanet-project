@@ -1,6 +1,6 @@
-# **BASIC CRUD APP - PHP, MySQL**
+# **PostEdge**
 
-Welcome to the **BASIC CRUD APP**! This is a simple yet robust web application that allows users to manage their posts and profiles through basic CRUD (Create, Read, Update, Delete) operations. The app is built using **PHP**, **MySQL**, **HTML**, and **CSS**, making it an excellent example of how to build dynamic web applications with a secure backend.
+Welcome to the **PostEdge**! This is a simple yet robust web application that allows users to manage their posts and profiles through basic CRUD (Create, Read, Update, Delete) operations. The app is built using **PHP**, **MySQL**, **HTML**, and **CSS**, making it an excellent example of how to build dynamic web applications with a secure backend.
 
 ---
 
@@ -17,7 +17,7 @@ Welcome to the **BASIC CRUD APP**! This is a simple yet robust web application t
 
 ## **Introduction**
 
-The **BASIC CRUD APP** provides a platform where users can first **register** and **log in** to access their profile. After logging in, users can perform various **CRUD operations on posts**, such as creating, reading, updating, and deleting posts. They can also update their own **profile**, view their details, and search for any posts through the search functionality. 
+The **PostEdge** provides a platform where users can first **register** and **log in** to access their profile. After logging in, users can perform various **CRUD operations on posts**, such as creating, reading, updating, and deleting posts. They can also update their own **profile**, view their details, and search for any posts through the search functionality. 
 
 Additionally, the app implements **pagination** to manage large amounts of data and supports the assignment of **different roles** such as **User**, **Admin**, and **Editor**. Each role has different levels of access and privileges, ensuring smooth management of the website.
 
